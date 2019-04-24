@@ -6,6 +6,9 @@ import Slider from './components/Slider'
 import Loader from './components/Loader'
 import Result from './components/Result'
 
+////////////////////////////////////////////
+////////// different sets of data for
+////////// loan and duration selector /////
 const data = {
   loan: {
     text: 'Loan Amount',
@@ -30,14 +33,17 @@ class App extends Component {
     monthlyPayment: {}
   }
 
+  //set duration according to selector data
   setDuration = (duration) => {
     this.setState({duration})
   }
 
+  //set loan according to selector data
   setLoan = (loan) => {
     this.setState({loan})
   }
 
+  ///fetch interest and monthly payment if both loan and duration are set
   fetchLoanDetail = () => {
     let {duration, loan} = this.state;
     if(duration >= 6 && loan >= 500){
@@ -57,6 +63,7 @@ class App extends Component {
     }
   }
 
+  ////check if fetched data is returned from api call
   isResultReady = () => {
     let {duration, loan, isLoading} = this.state;
     return (duration >= 6 && loan >= 500 && !isLoading)? true: false;
