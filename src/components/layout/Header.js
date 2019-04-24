@@ -21,7 +21,8 @@ const styles = {
     },
     heading: {
       color: '#00a1e7',
-      fontSize: '30px'
+      fontSize: '40px',
+      textTransform: 'uppercase'
     }
 }
 

@@ -8,6 +8,7 @@ class Slider extends Component{
     let {value} = evt.target
     this.setState({value})
     this.props.setParameter(value)
+    this.props.fetchLoanDetail()
   }
   render(){
     let {data} = this.props;

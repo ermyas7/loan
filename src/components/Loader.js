@@ -17,7 +17,7 @@ const loaderContainer = {
 
 const loaderImage = {
     display: 'inline-block',
-    width: '50px'
+    width: '30px'
 }
 
 export default Loader
